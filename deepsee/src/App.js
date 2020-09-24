@@ -6,7 +6,7 @@ import Map from './Components/MapComponent';
 function App () {
   return (
     <div>
-      <Map />
+      <Map className="map"/>
     </div>
   )
 }

@@ -1,7 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
+import ReactDOM from 'react-dom';
 import mapboxgl from 'mapbox-gl';
+import Modal from './ModalComponent';
+
 
 function Map () {
+
 
   const mapContainer = useRef(null);
 
@@ -9,15 +13,23 @@ function Map () {
   const [lat, setLat] = useState(-8.6057);
   const [zoom, setZoom] = useState(10.22);
 
-  useEffect( () => {
+  // function handleShow() {
+  //   console.log('show');
+  //   return ReactDOM.render(
+  //     <Modal />,
+  //     modalRoot
+  //     )
+  //   };
+
+    useEffect( () => {
 
     mapboxgl.accessToken = 'pk.eyJ1Ijoic3RlaGVyYSIsImEiOiJja2ZmOTYxNTgwY2sxMnJvM3R3bGhwbW05In0.nzQVNouROweGSb7p6dw2cA';
-      const map = new mapboxgl.Map({
-        container: mapContainer.current,
-        style: 'mapbox://styles/stehera/ckffagb3k12jh1api1n2lau45',
-        center: [lng, lat],
-        zoom: zoom
-      });
+    const map = new mapboxgl.Map({
+      container: mapContainer.current,
+      style: 'mapbox://styles/stehera/ckffagb3k12jh1api1n2lau45',
+      center: [lng, lat],
+      zoom: zoom
+    });
 
     map.on('move', () => {
       setLng(map.getCenter().lng.toFixed(4))
@@ -25,22 +37,66 @@ function Map () {
       setZoom(map.getZoom().toFixed(4))
     })
 
-    map.on('click', function(e) {
-      var features = map.queryRenderedFeatures(e.point, {
-        layers: ['komodo-dive-sites'] // replace this with the name of the layer
+
+    map.on('click', 'komodo-dive-sites', (e) => {
+      const modalRoot = document.getElementById('modal-root');
+      const modalDiv = document.createElement('div');
+      modalRoot.appendChild(modalDiv);
+    //   var features = map.queryRenderedFeatures(e.point, {
+    //     layers: ['komodo-dive-sites'] // replace this with the name of the layer
+    // });
+
+    // if (!features.length) {
+    //   return;
+    // }
+
+    // var feature = features[0];
+
+
+    // //ALLOWS RENDERING REACT COMPONENT INSIDE OF POPUP
+    // // const popup = document.createElement('div');
+    // // ReactDOM.render(<Popup/>, popup);
+
+    // new mapboxgl.Popup({})
+    //   .setLngLat(feature.geometry.coordinates)
+    //   .setHTML('<p>'+ feature.properties.title +'</p>')
+    //   .addTo(map);
+    return ReactDOM.render( //might be better to use ReactDOM.createPortal
+      <Modal />,
+      modalRoot
+      )
+
+
     });
 
-    if (!features.length) {
-      return;
-    }
+    const popup = new mapboxgl.Popup({
+      closeButton: false,
+      closeOnClick: false
+    })
 
-    var feature = features[0];
+    map.on('mouseenter', 'komodo-dive-sites', (e) => {
+      // Change the cursor style as a UI indicator
+      map.getCanvas().style.cursor = 'pointer';
 
-    var popup = new mapboxgl.Popup({ offset: [0, -15] })
-      .setLngLat(feature.geometry.coordinates)
-      .setHTML('<h3>' + feature.properties.title + '</h3>')
-      .addTo(map);
+      const coordinates = e.features[0].geometry.coordinates.slice();
+      const title = e.features[0].properties.title;
+
+      //Ensure that if the map is zoomed out such that multiple
+      //copies of the feature are visivle this popup appears
+      //over the copy being pointed to.
+      while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+        coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+      }
+
+      //Populate the popup and set its coordinates
+      //based on the feature found.
+      popup.setLngLat(coordinates).setHTML(title).addTo(map);
     });
+
+    map.on('mouseleave', 'komodo-dive-sites', () => {
+      map.getCanvas().style.cursor = '';
+      popup.remove();
+    })
 
   }, []);
 
@@ -54,6 +110,7 @@ function Map () {
         </div>
         <div ref={el => mapContainer.current = el}
           className="map-container"/>
+        <div id="modal-root"></div>
       </div>
     );
 }

@@ -18,3 +18,21 @@
   padding: 6px;
   font-weight: bold;
 }
+
+#modal-root {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 200px;
+  background-color: rgba(0,0,0,0.5);
+  color: #ffffff;
+  z-index: 1 !important;
+  padding: 6px;
+  font-weight: bold;
+}
+
+.modal {
+  height: 100vh;
+  width: 100vw;
+}
