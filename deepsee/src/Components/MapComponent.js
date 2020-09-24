@@ -62,11 +62,9 @@ function Map () {
     //   .setHTML('<p>'+ feature.properties.title +'</p>')
     //   .addTo(map);
     return ReactDOM.render( //might be better to use ReactDOM.createPortal
-      <Modal />,
+      <Modal closeModal={() => closeModal()}/>,
       modalRoot
       )
-
-
     });
 
     const popup = new mapboxgl.Popup({
@@ -100,6 +98,14 @@ function Map () {
 
   }, []);
 
+  function closeModal () {
+    const modalRoot = document.getElementById('modal-root');
+    return ReactDOM.render( //might be better to use ReactDOM.createPortal
+      null,
+      modalRoot
+      )
+  }
+
 
     return (
       <div>
@@ -109,8 +115,9 @@ function Map () {
           </div>
         </div>
         <div ref={el => mapContainer.current = el}
-          className="map-container"/>
-        <div id="modal-root"></div>
+          className="map-container">
+            <div id="modal-root"></div>
+          </div>
       </div>
     );
 }

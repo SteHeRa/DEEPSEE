@@ -32,7 +32,25 @@
   font-weight: bold;
 }
 
-.modal {
+.modal-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
   width: 100vw;
+}
+
+.modal {
+  color: #364652;
+  background-color: #eeeeee;
+  width: 450px;
+  height: 80vh;
+  overflow-y: scroll;
+  border-radius: 15px;
+  filter: drop-shadow(0 0 6px rgba(0,0,0, 0.6));
+}
+
+.modal-content {
+  padding: 40px;
 }
