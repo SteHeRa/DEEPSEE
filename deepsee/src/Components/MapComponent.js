@@ -109,13 +109,13 @@ function Map () {
 
     return (
       <div>
-        <div className='sidebar-style'>
+        <div ref={el => mapContainer.current = el}
+          className="map-container">
+            <div className='sidebar-style'>
           <div>Longitude: {lng} | Latitude:
             {lat} | Zoom: {zoom}
           </div>
         </div>
-        <div ref={el => mapContainer.current = el}
-          className="map-container">
             <div id="modal-root"></div>
           </div>
       </div>
