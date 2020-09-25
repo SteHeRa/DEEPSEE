@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import ReactDOM from 'react-dom';
 import mapboxgl from 'mapbox-gl';
-import Modal from './ModalComponent';
+import DiveSiteModal from './DiveSiteModalComponent';
 
 
 function Map () {
@@ -61,7 +61,7 @@ function Map () {
     //   .setHTML('<p>'+ feature.properties.title +'</p>')
     //   .addTo(map);
     return ReactDOM.render( //might be better to use ReactDOM.createPortal
-      <Modal closeModal={() => closeModal()}/>,
+      <DiveSiteModal closeModal={() => closeModal()}/>,
       modalRoot
       )
     });

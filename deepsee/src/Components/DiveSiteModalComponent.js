@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-function Modal (props) {
+function DiveSiteModal (props) {
 
   useEffect ( () => {
   }, [])
@@ -55,4 +55,4 @@ function Modal (props) {
     )
 }
 
-export default Modal;
+export default DiveSiteModal;
