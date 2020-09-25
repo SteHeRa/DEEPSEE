@@ -23,7 +23,7 @@ function App () {
 
   return (
     <div className="app">
-      <Nav logClick={() => handleLogClick()} mapClick={() => handleMapClick()}/>
+      <Nav logClick={() => handleLogClick()} mapClick={() => handleMapClick()} showLog={showLog}/>
       {showLog ?
       <Log /> :
       <Map className="map"/>}

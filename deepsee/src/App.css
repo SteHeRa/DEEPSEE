@@ -21,6 +21,19 @@
   flex-grow: 1;
 }
 
+.navigation-buttons button {
+  font-size: large;
+  font-weight: bold;
+  border-style: none;
+  border-radius: 5px;
+  height: 30px;
+  transition: color, 0.3s;
+}
+
+.navigation-buttons button:focus {
+  outline: none;
+}
+
 .log-book {
   display: flex;
   justify-content: center;
