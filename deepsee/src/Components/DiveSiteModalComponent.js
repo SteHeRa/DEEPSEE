@@ -1,17 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
-function DiveSiteModal (props) {
-
-  useEffect ( () => {
-  }, [])
+function DiveSiteModal ({ closeModal }) {
 
   return (
-      <div className="modal-container" onClick={() => props.closeModal()}>
+      <div className="modal-container" onClick={() => closeModal()}>
         <div className="modal" onClick={(e) => {
           e.preventDefault();
           e.stopPropagation();
         }}>
-          <button onClick={() => props.closeModal()}>X</button>
+          <button onClick={() => closeModal()}>X</button>
           <div className="modal-content">
           I'm baby austin franzen actually activated charcoal cornhole cred quinoa
           small batch unicorn chicharrones brunch lumbersexual. Asymmetrical try-hard

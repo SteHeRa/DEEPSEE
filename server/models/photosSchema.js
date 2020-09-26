@@ -9,6 +9,4 @@ const photoSchema = new Schema({
   diveSite: {type: String, required: [true, 'Photo requires Dive Site']},
 });
 
-const Photo = mongoose.model('Photo', photoSchema);
-
-module.exports = Photo;
+module.exports = mongoose.model('Photo', photoSchema);

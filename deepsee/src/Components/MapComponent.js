@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import mapboxgl from 'mapbox-gl';
 import DiveSiteModal from './DiveSiteModalComponent';
 
-
 function Map () {
 
   const mapContainer = useRef(null);
@@ -22,7 +21,7 @@ function Map () {
 
     useEffect( () => {
 
-    mapboxgl.accessToken = 'pk.eyJ1Ijoic3RlaGVyYSIsImEiOiJja2ZmOTYxNTgwY2sxMnJvM3R3bGhwbW05In0.nzQVNouROweGSb7p6dw2cA';
+    mapboxgl.accessToken = 'pk.eyJ1Ijoic3RlaGVyYSIsImEiOiJja2ZmOTYxNTgwY2sxMnJvM3R3bGhwbW05In0.nzQVNouROweGSb7p6dw2cA'; //TODO store in server
     const map = new mapboxgl.Map({
       container: mapContainer.current,
       style: 'mapbox://styles/stehera/ckffagb3k12jh1api1n2lau45',
@@ -116,7 +115,6 @@ function Map () {
             {lat} | Zoom: {zoom}
           </div>
         </div>
-            <div id="modal-root"></div>
           </div>
       </div>
     );

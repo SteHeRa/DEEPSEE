@@ -1,7 +1,7 @@
-const DatauriParser = require('datauri/parser');
+const DataUriParser = require('datauri/parser');
 const path = require('path');
 
-const parser = new DatauriParser();
+const parser = new DataUriParser();
 
 const dataUri = req =>
 parser.format(path.extname(req.file.originalname).toString(),

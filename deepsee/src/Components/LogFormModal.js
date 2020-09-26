@@ -34,9 +34,7 @@ function LogFormModal (props) {
               <label htmlFor="notes">Notes: </label>
               <input type="text" name="notes" defaultValue=""/>
               <label htmlFor="photos">Photos: </label>
-              <div className="photo-preview">
-                {}
-              </div>
+              <div className="photo-preview"></div>
               <input type="file" id="photos" name="photos" accept="image/png, image/jpeg"/>
               <input type="submit"/>
             </form>

@@ -11,7 +11,7 @@ const router = require('./routes');
 const PORT = 3001;
 
 app.use(json());
-app.use('*', cloudinaryConfig);
+app.use('/photos', cloudinaryConfig); //TODO only use on post requests
 app.use('/', router);
 
 app.listen(PORT, () => {

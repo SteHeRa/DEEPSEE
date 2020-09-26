@@ -7,24 +7,24 @@ import Map from './Components/MapComponent';
 
 function App () {
 
-  const [showLog, setShowLog] = useState(true);
+  const [isShowLog, setIsShowLog] = useState(true);
 
   function handleLogClick () {
-    if (!showLog) {
-      setShowLog(true);
+    if (!isShowLog) {
+      setIsShowLog(true);
     }
   }
 
   function handleMapClick () {
-    if (showLog) {
-      setShowLog(false);
+    if (isShowLog) {
+      setIsShowLog(false);
     }
   }
 
   return (
     <div className="app">
-      <Nav logClick={() => handleLogClick()} mapClick={() => handleMapClick()} showLog={showLog}/>
-      {showLog ?
+      <Nav logClick={() => handleLogClick()} mapClick={() => handleMapClick()} showLog={isShowLog}/>
+      {isShowLog ?
       <Log /> :
       <Map className="map"/>}
     </div>

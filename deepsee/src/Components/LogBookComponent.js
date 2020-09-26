@@ -13,7 +13,7 @@ function Log () {
     const modalDiv = document.createElement('div');
     modalRoot.appendChild(modalDiv);
     return ReactDOM.render( //might be better to use ReactDOM.createPortal
-      <LogFormModal closeModal={() => closeLogForm()}/>,
+      <LogFormModal closeModal={closeLogForm}/>,
       modalRoot
       )
   }
@@ -32,7 +32,6 @@ function Log () {
         <div className="add-dive-button-plus">+</div>
         </div>
       <LogList log={logData}/>
-      <div id="modal-root"></div>
     </div>
   )
 }
