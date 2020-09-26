@@ -35,6 +35,11 @@
 }
 
 .log-book {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  left: 0;
+  bottom: 0;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -157,4 +162,18 @@
 
 .modal-content {
   padding: 40px;
+}
+
+.new-log-form-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.photo-preview {
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+  background-color: #ffffff;
+  height: 200px;
+  width: 70vw;
 }
