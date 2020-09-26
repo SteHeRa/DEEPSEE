@@ -1,18 +1,18 @@
 import React from 'react';
-import ApiClient from '../services/ApiClient';
+// import ApiClient from '../services/ApiClient';
 
 function LogFormModal (props) {
 
-  async function handleSubmit (e) {
-    e.preventDefault();
-    const photos = document.getElementById('photos').files;
-    if (photos.length !== 0) {
-      console.log(photos);
-      await ApiClient.postPhotos(photos);
-      console.log('there were photos');
-    } else console.log('there were no photos');
-    await ApiClient.postLog();
-  };
+  // async function handleSubmit (e) {
+  //   e.preventDefault();
+  //   const photos = document.getElementById('photos').files;
+  //   if (photos.length !== 0) {
+  //     console.log(photos);
+  //     await ApiClient.postPhotos(photos);
+  //     console.log('there were photos');
+  //   } else console.log('there were no photos');
+  //   await ApiClient.postLog();
+  // };
 
   return (
     <div className="modal-container" onClick={() => props.closeModal()}>
@@ -37,7 +37,7 @@ function LogFormModal (props) {
               <div className="photo-preview">
                 {}
               </div>
-              <input type="file" id="photos" name="photos" accept="image/png, image/jpeg" multiple/>
+              <input type="file" id="photos" name="photos" accept="image/png, image/jpeg"/>
               <input type="submit"/>
             </form>
           </div>
