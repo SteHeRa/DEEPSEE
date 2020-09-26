@@ -19,11 +19,11 @@ async function create (req, res) {
     res.status(201)
     res.send(user);
   } catch (err) {
-    console.log('---> error creating new user', e.stack);
+    console.log('---> error creating new user', err.stack);
     res.status(500);
-    res.send({error, message: 'Could not create user'});
+    res.send({err, message: 'Could not create user'});
   }
-};
+}
 
 module.exports = {
   create

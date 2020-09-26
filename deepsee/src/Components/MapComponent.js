@@ -37,7 +37,7 @@ function Map () {
     })
 
 
-    map.on('click', 'komodo-dive-sites', (e) => {
+    map.on('click', 'komodo-dive-sites', (err) => {
       const modalRoot = document.getElementById('modal-root');
       const modalDiv = document.createElement('div');
       modalRoot.appendChild(modalDiv);

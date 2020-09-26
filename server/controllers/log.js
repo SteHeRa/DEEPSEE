@@ -15,9 +15,9 @@ async function getLogs (req, res) {
     return user.logs;
   } catch (err) {
     res.status(500);
-    res.send({error, message: 'Could not get logs'});
+    res.send({err, message: 'Could not get logs'});
   }
-};
+}
 
 async function postLog (req, res) {
   const { email, log } = req.body;
@@ -30,7 +30,7 @@ async function postLog (req, res) {
       return res;
     }
   user.logs = [...user.logs, log];
-  updatedUser = await user.save();
+  const updatedUser = await user.save();
   res.status(200);
   res.send(updatedUser);
   } catch (err) {
@@ -38,7 +38,7 @@ async function postLog (req, res) {
     res.status(500);
     res.send({error: '500', message: 'Could not post log'});
   }
-};
+}
 
 module.exports = {
   getLogs,

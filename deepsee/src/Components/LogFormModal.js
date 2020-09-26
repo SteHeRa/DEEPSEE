@@ -21,7 +21,7 @@ function LogFormModal (props) {
         }}>
           <button onClick={() => props.closeModal()}>X</button>
           <div className="modal-content">
-            <form className="new-log-form-item" /*onSubmit={e => handleSubmit(e)}*/ enctype="multipart/form-data" action="http://localhost:3001/photos" method="post">
+            <form className="new-log-form-item" /*onSubmit={e => handleSubmit(e)}*/ encType="multipart/form-data" action="http://localhost:3001/photos" method="post">
               <h3>Add a new dive</h3>
               <label htmlFor="country">Country: </label>
               <input type="text" name="country" defaultValue=""/>

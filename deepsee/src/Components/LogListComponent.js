@@ -5,7 +5,7 @@ function LogList (props) {
   return (
     <div className="log-list">
       {props.log.map( dive => {
-        return <LogListItem dive={dive}/>
+        return <LogListItem dive={dive}/> //set up keys when database fully connected
       })}
     </div>
   )
