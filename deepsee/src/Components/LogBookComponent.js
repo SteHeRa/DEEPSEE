@@ -14,6 +14,7 @@ function Log () {
     ApiClient.getLogs()
       .then( logList => {
         if (logList[0] !== undefined) {
+          logList.sort((a, b) => b.date - a.date);
           setLogData(logList);
         } else setLogData([]);
       });
