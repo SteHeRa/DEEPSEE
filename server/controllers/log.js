@@ -20,7 +20,12 @@ async function getLogs (req, res) {
 }
 
 async function postLog (req, res) {
-  const { email, log } = req.body;
+  const { email } = req.body;
+  const log = {
+    ...req.body,
+    date: new Date(req.body.date)
+  }
+  delete log.email;
   try{
     const user = await User.findOne({email: email});
     if (!user) {
@@ -31,8 +36,8 @@ async function postLog (req, res) {
     }
   user.logs = [...user.logs, log];
   const updatedUser = await user.save();
-  res.status(200);
-  res.send(updatedUser);
+  res.sendStatus(200);
+  return updatedUser.logs[updatedUser.logs.length - 1];
   } catch (err) {
     console.log('---> error posting new log', err.stack)
     res.status(500);
