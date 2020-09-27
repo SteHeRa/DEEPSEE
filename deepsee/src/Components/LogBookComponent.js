@@ -1,18 +1,29 @@
-import React from 'react';
+import React, { useState, useEffect }from 'react';
 import ReactDOM from 'react-dom';
 import LogList from './LogListComponent';
 import LogFormModal from './LogFormModal';
-
-const logData = require('../mockLog.json');
-
+import ApiClient from '../services/ApiClient';
 
 function Log () {
+
+  const [ logData, setLogData ] = useState([])
+
+  useEffect( () => makeLogList(), [])
+
+  function makeLogList() {
+    ApiClient.getLogs()
+      .then( logList => {
+        if (logList[0] !== undefined) {
+          setLogData(logList);
+        } else setLogData([]);
+      });
+  }
 
   function openLogForm () {
     const modalRoot = document.getElementById('modal-root');
     const modalDiv = document.createElement('div');
     modalRoot.appendChild(modalDiv);
-    return ReactDOM.render( //might be better to use ReactDOM.createPortal
+    ReactDOM.render( //might be better to use ReactDOM.createPortal
       <LogFormModal closeModal={closeLogForm}/>,
       modalRoot
       )
@@ -20,7 +31,7 @@ function Log () {
 
   function closeLogForm () {
     const modalRoot = document.getElementById('modal-root');
-    return ReactDOM.render( //might be better to use ReactDOM.createPortal
+    ReactDOM.render( //might be better to use ReactDOM.createPortal
       null,
       modalRoot
       )

@@ -1,7 +1,7 @@
 const User = require('../models/userSchema');
 
 async function getLogs (req, res) {
-  const email = req.body.email;
+  const email = 'test';
   try{
     const user = await User.findOne({email: email});
     if (!user) {
@@ -12,7 +12,6 @@ async function getLogs (req, res) {
     }
     res.status(200);
     res.send(user.logs);
-    return user.logs;
   } catch (err) {
     res.status(500);
     res.send({err, message: 'Could not get logs'});
