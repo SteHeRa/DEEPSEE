@@ -1,18 +1,20 @@
 import React from 'react';
-// import ApiClient from '../services/ApiClient';
+import ApiClient from '../services/ApiClient';
 
 function LogFormModal (props) {
 
-  // async function handleSubmit (e) {
-  //   e.preventDefault();
-  //   const photos = document.getElementById('photos').files;
-  //   if (photos.length !== 0) {
-  //     console.log(photos);
-  //     await ApiClient.postPhotos(photos);
-  //     console.log('there were photos');
-  //   } else console.log('there were no photos');
-  //   await ApiClient.postLog();
-  // };
+  async function handleSubmit (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    const formData = new FormData();
+    formData.append('country', e.target.country.value);
+    formData.append('region', e.target.region.value);
+    formData.append('diveSite', e.target.diveSite.value);
+    formData.append('date', e.target.date.value);
+    formData.append('notes', e.target.notes.value);
+    formData.append('photos', e.target.photos.files[0]);
+    ApiClient.postLog(formData);
+  }
 
   return (
     <div className="modal-container" onClick={() => props.closeModal()}>
@@ -21,7 +23,7 @@ function LogFormModal (props) {
         }}>
           <button onClick={() => props.closeModal()}>X</button>
           <div className="modal-content">
-            <form className="new-log-form-item" /*onSubmit={e => handleSubmit(e)}*/ encType="multipart/form-data" action="http://localhost:3001/photos" method="post">
+            <form className="new-log-form-item"  onSubmit={handleSubmit}>
               <h3>Add a new dive</h3>
               <label htmlFor="country">Country: </label>
               <input type="text" name="country" defaultValue=""/>
