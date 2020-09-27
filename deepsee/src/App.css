@@ -28,6 +28,7 @@
   border-radius: 5px;
   height: 30px;
   transition: color, 0.3s;
+  cursor: pointer;
 }
 
 .navigation-buttons button:focus {
@@ -44,7 +45,7 @@
   justify-content: center;
   align-items: flex-start;
   background-color: #eeeeee;
-  height: 100vh;
+  height: calc(100vh - 60px);
   width: 100%;
 }
 
@@ -52,9 +53,10 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  align-items: center;
   height: 100%;
   width: 80vw;
-  max-width: 600px;
+  max-width: 650px;
   overflow: auto;
 }
 
@@ -69,7 +71,14 @@
   border-radius: 7px;
   filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.4));
   height: 120px;
+  width: 82%;
   overflow: hidden;
+  cursor: pointer;
+}
+
+.log-list-item:hover {
+  transform: scale(1.1,1.1);
+  transition: transform 0.5s;
 }
 
 .log-list-item h3 {
@@ -81,14 +90,19 @@
   flex-grow: 1;
 }
 
-.log-list-item-image {
+.log-list-item-image-container {
   background-color: #fecf12;
   width: 120px;
   height: 120px;
   text-align: center;
 }
 
-.add-dive-button {
+.log-list-item-image {
+  height: 100%;
+  width: 100%;
+}
+
+#add-dive-button {
   flex-shrink: 0;
   font-size: 120px;
   font-weight: 500;
@@ -99,9 +113,15 @@
   background-color: #2c248d;
   color: #fecf12;
   filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.4));
+  cursor: pointer;
 }
 
-.add-dive-button-plus {
+#add-dive-button:hover {
+  transform: scale(1.1,1.1);
+  transition: transform 0.5s;
+}
+
+#add-dive-button-plus {
   position: relative;
   top: -44px;
   left: 9px;
