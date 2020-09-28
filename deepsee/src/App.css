@@ -172,6 +172,19 @@
   filter: drop-shadow(0 0 6px rgba(0,0,0, 0.6));
 }
 
+.close-modal-button {
+  font-weight: bold;
+  border-style: none;
+  align-self: flex-start;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.close-modal-button:hover {
+  transform: scale(1.5,1.5);
+  transition: transform 0.5s;
+}
+
 .modal-content {
   padding: 40px;
 }

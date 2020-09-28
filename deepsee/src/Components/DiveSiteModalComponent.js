@@ -28,7 +28,7 @@ function DiveSiteModal ({ closeModal, diveSite }) {
           e.preventDefault();
           e.stopPropagation();
         }}>
-          <button onClick={() => closeModal()}>X</button>
+          <button className="close-modal-button" onClick={() => closeModal()}>X</button>
           <div className="modal-content">
             {photos.map( photo => <DiveSitePhoto key={photo} photo={photo}/>)}
           </div>

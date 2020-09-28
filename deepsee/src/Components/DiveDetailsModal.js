@@ -6,7 +6,7 @@ function DiveDetailsModal (props) {
         <div className="modal" onClick={(e) => {
           e.stopPropagation();
         }}>
-          <button onClick={() => props.closeModal()}>X</button>
+          <button className="close-modal-button" onClick={() => props.closeModal()}>X</button>
           <div className="modal-content">
             <h3>{props.dive.diveSite}</h3>
             <h3>{`${props.dive.country} - ${props.dive.region}`}</h3>
