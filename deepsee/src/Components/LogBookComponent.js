@@ -1,8 +1,10 @@
 import React, { useState, useEffect }from 'react';
 import ReactDOM from 'react-dom';
+import ApiClient from '../services/ApiClient';
+
 import LogList from './LogListComponent';
 import LogFormModal from './LogFormModal';
-import ApiClient from '../services/ApiClient';
+import DiveDetailsModal from './DiveDetailsModal';
 
 function Log () {
 
@@ -22,15 +24,23 @@ function Log () {
 
   function openLogForm () {
     const modalRoot = document.getElementById('modal-root');
-    const modalDiv = document.createElement('div');
-    modalRoot.appendChild(modalDiv);
+    const modalDiv = document.createElement('div'); //UNNECESSARY
+    modalRoot.appendChild(modalDiv);                //UNNECESSARY
     ReactDOM.render( //might be better to use ReactDOM.createPortal
-      <LogFormModal makeLogList={() => makeLogList()} closeModal={closeLogForm}/>,
+      <LogFormModal makeLogList={() => makeLogList()} closeModal={closeModal}/>,
       modalRoot
       )
   }
 
-  function closeLogForm () {
+  function openDetails (dive) {
+    const modalRoot = document.getElementById('modal-root');
+    ReactDOM.render( //might be better to use ReactDOM.createPortal
+      <DiveDetailsModal dive={dive} closeModal={closeModal}/>,
+      modalRoot
+      )
+  }
+
+  function closeModal () {
     const modalRoot = document.getElementById('modal-root');
     ReactDOM.render( //might be better to use ReactDOM.createPortal
       null,
@@ -43,7 +53,7 @@ function Log () {
       <div id="add-dive-button" onClick={() => openLogForm()}>
         <div id="add-dive-button-plus">+</div>
         </div>
-      <LogList log={logData}/>
+      <LogList log={logData} openDetails={(dive) => openDetails(dive)}/>
     </div>
   )
 }
