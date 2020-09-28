@@ -13,7 +13,8 @@ function LogFormModal (props) {
     formData.append('date', e.target.date.value);
     formData.append('notes', e.target.notes.value);
     formData.append('photos', e.target.photos.files[0]);
-    ApiClient.postLog(formData);
+    ApiClient.postLog(formData)
+      .then(() => props.makeLogList());
   }
 
   return (
