@@ -9,13 +9,17 @@ export default {
   },
 
   postLog: async (logData) => {
-    const postedLog = await fetch(`${BASE_URL}/logs`, {
+    await fetch(`${BASE_URL}/logs`, {
       method: 'POST',
       body: logData
     })
     .then(res => res.json())
-    .then(json => console.log(json));
-    console.log(postedLog);
+  },
+
+  getPhotos: async (diveSite) => {
+    const photos = await fetch(`${BASE_URL}/photos?country=${diveSite.country}&region=${diveSite.region}&diveSite=${diveSite.diveSite}`)
+      .then(res => res.json())
+    return photos;
   }
 
 }

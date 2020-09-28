@@ -161,6 +161,8 @@
 }
 
 .modal {
+  display: flex;
+  flex-direction: column;
   color: #364652;
   background-color: #eeeeee;
   width: 450px;
@@ -185,5 +187,13 @@
   overflow-y: scroll;
   background-color: #ffffff;
   height: 200px;
+  width: 100%;
+}
+
+.photo-component{
+  filter: drop-shadow(0 0 6px rgba(0,0,0, 0.6));
+}
+
+.photo-component-image {
   width: 100%;
 }

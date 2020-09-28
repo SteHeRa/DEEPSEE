@@ -11,14 +11,6 @@ function Map () {
   const [lat, setLat] = useState(-8.6057);
   const [zoom, setZoom] = useState(10.22);
 
-  // function handleShow() {
-  //   console.log('show');
-  //   return ReactDOM.render(
-  //     <Modal />,
-  //     modalRoot
-  //     )
-  //   };
-
     useEffect( () => {
 
     mapboxgl.accessToken = 'pk.eyJ1Ijoic3RlaGVyYSIsImEiOiJja2ZmOTYxNTgwY2sxMnJvM3R3bGhwbW05In0.nzQVNouROweGSb7p6dw2cA'; //TODO store in server
@@ -36,31 +28,19 @@ function Map () {
     })
 
 
-    map.on('click', 'komodo-dive-sites', (err) => {
+    map.on('click', 'komodo-dive-sites', (e) => {
       const modalRoot = document.getElementById('modal-root');
       const modalDiv = document.createElement('div');
       modalRoot.appendChild(modalDiv);
-    //   var features = map.queryRenderedFeatures(e.point, {
-    //     layers: ['komodo-dive-sites'] // replace this with the name of the layer
-    // });
 
-    // if (!features.length) {
-    //   return;
-    // }
+      const diveSite = {
+        country: e.features[0].properties.country,
+        region: e.features[0].properties.region,
+        diveSite: e.features[0].properties.title
+      }
 
-    // var feature = features[0];
-
-
-    // //ALLOWS RENDERING REACT COMPONENT INSIDE OF POPUP
-    // // const popup = document.createElement('div');
-    // // ReactDOM.render(<Popup/>, popup);
-
-    // new mapboxgl.Popup({})
-    //   .setLngLat(feature.geometry.coordinates)
-    //   .setHTML('<p>'+ feature.properties.title +'</p>')
-    //   .addTo(map);
-    return ReactDOM.render( //might be better to use ReactDOM.createPortal
-      <DiveSiteModal closeModal={() => closeModal()}/>,
+    ReactDOM.render( //might be better to use ReactDOM.createPortal
+      <DiveSiteModal diveSite={diveSite} closeModal={() => closeModal()}/>,
       modalRoot
       )
     });
@@ -99,7 +79,7 @@ function Map () {
 
   function closeModal () {
     const modalRoot = document.getElementById('modal-root');
-    return ReactDOM.render( //might be better to use ReactDOM.createPortal
+    ReactDOM.render( //might be better to use ReactDOM.createPortal
       null,
       modalRoot
       )
