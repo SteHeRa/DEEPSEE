@@ -1,7 +1,20 @@
-import React from 'react';
+import React, {useState} from 'react';
 import ApiClient from '../services/ApiClient';
 
+import DiveSitePhoto from './DiveSitePhotoComponent';
+
 function LogFormModal (props) {
+
+  const [photoPreviews, setPhotoPreviews] = useState([]);
+
+  function handleChange (e) {
+    console.log(e.target.value);
+    const photos = [];
+    for (let i = 0; i < e.target.files.length; i++) {
+      photos.push(URL.createObjectURL(e.target.files[i]));
+    }
+    setPhotoPreviews(photos);
+  }
 
   async function handleSubmit (e) {
     e.preventDefault();
@@ -22,7 +35,7 @@ function LogFormModal (props) {
         <div className="modal" onClick={(e) => {
           e.stopPropagation();
         }}>
-          <button onClick={() => props.closeModal()}>X</button>
+          <button className="close-modal-button" onClick={() => props.closeModal()}>X</button>
           <div className="modal-content">
             <form className="new-log-form-item"  onSubmit={handleSubmit}>
               <h3>Add a new dive</h3>
@@ -37,8 +50,10 @@ function LogFormModal (props) {
               <label htmlFor="notes">Notes: </label>
               <input type="text" name="notes" defaultValue=""/>
               <label htmlFor="photos">Photos: </label>
-              <div className="photo-preview"></div>
-              <input type="file" id="photos" name="photos" accept="image/png, image/jpeg"/>
+              <div className="photo-preview">
+                {photoPreviews.map(photo => <DiveSitePhoto key={photo} photo={photo} className="photo-preview-item"/>)}
+              </div>
+              <input type="file" id="photos" name="photos" accept="image/png, image/jpeg" onChange={handleChange}/>
               <input type="submit"/>
             </form>
           </div>
