@@ -24,8 +24,6 @@ function Log () {
 
   function openLogForm () {
     const modalRoot = document.getElementById('modal-root');
-    const modalDiv = document.createElement('div'); //UNNECESSARY
-    modalRoot.appendChild(modalDiv);                //UNNECESSARY
     ReactDOM.render( //might be better to use ReactDOM.createPortal
       <LogFormModal makeLogList={() => makeLogList()} closeModal={closeModal}/>,
       modalRoot

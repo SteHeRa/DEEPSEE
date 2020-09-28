@@ -30,8 +30,6 @@ function Map () {
 
     map.on('click', 'komodo-dive-sites', (e) => {
       const modalRoot = document.getElementById('modal-root');
-      const modalDiv = document.createElement('div');
-      modalRoot.appendChild(modalDiv);
 
       const diveSite = {
         country: e.features[0].properties.country,
