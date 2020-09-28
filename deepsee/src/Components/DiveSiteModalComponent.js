@@ -14,9 +14,7 @@ function DiveSiteModal ({ closeModal, diveSite }) {
   function makePhotoList (diveSite) {
     ApiClient.getPhotos(diveSite)
     .then( photos => {
-      console.log(photos);
       if (photos[0] !== undefined) {
-        console.log('array is populated');
         setPhotos(photos);
       } else setPhotos([]);
     });
