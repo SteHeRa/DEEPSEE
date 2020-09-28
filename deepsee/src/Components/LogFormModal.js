@@ -8,7 +8,6 @@ function LogFormModal (props) {
   const [photoPreviews, setPhotoPreviews] = useState([]);
 
   function handleChange (e) {
-    console.log(e.target.value);
     const photos = [];
     for (let i = 0; i < e.target.files.length; i++) {
       photos.push(URL.createObjectURL(e.target.files[i]));
@@ -38,7 +37,7 @@ function LogFormModal (props) {
           <button className="close-modal-button" onClick={() => props.closeModal()}>X</button>
           <div className="modal-content">
             <form className="new-log-form-item"  onSubmit={handleSubmit}>
-              <h3>Add a new dive</h3>
+              <h1>Add a new dive</h1>
               <label htmlFor="country">Country: </label>
               <input type="text" name="country" defaultValue=""/>
               <label htmlFor="region">Region: </label>
@@ -48,13 +47,15 @@ function LogFormModal (props) {
               <label htmlFor="date">Date: </label>
               <input type="date" name="date" defaultValue=""/>
               <label htmlFor="notes">Notes: </label>
-              <input type="text" name="notes" defaultValue=""/>
-              <label htmlFor="photos">Photos: </label>
+              <textarea id="notes" defaultValue="" className="notes-input"></textarea>
+              <label>Photos: </label>
               <div className="photo-preview">
                 {photoPreviews.map(photo => <DiveSitePhoto key={photo} photo={photo} className="photo-preview-item"/>)}
               </div>
-              <input type="file" id="photos" name="photos" accept="image/png, image/jpeg" onChange={handleChange}/>
-              <input type="submit"/>
+              <label htmlFor="photos" className="custom-style-file-input">Add Photos
+                <input type="file" id="photos" name="photos" accept="image/png, image/jpeg" onChange={handleChange}/>
+              </label>
+              <input className="submit-btn" type="submit"/>
             </form>
           </div>
         </div>

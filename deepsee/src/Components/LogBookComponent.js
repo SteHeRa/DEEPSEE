@@ -48,10 +48,13 @@ function Log () {
 
   return (
     <div className="log-book">
-      <div id="add-dive-button" onClick={() => openLogForm()}>
-        <div id="add-dive-button-plus">+</div>
-        </div>
-      <LogList log={logData} openDetails={(dive) => openDetails(dive)}/>
+      <div className="log-book-header">Your Dives</div>
+      <div className="log-book-content">
+        <div id="add-dive-button" onClick={() => openLogForm()}>
+          <div id="add-dive-button-plus">+</div>
+          </div>
+        <LogList log={logData} openDetails={(dive) => openDetails(dive)}/>
+      </div>
     </div>
   )
 }

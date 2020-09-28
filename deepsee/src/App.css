@@ -42,11 +42,24 @@
   left: 0;
   bottom: 0;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   background-color: #eeeeee;
   height: calc(100vh - 60px);
   width: 100%;
+  overflow-y: scroll;
+}
+
+.log-book-header {
+  font-size: 60px;
+  font-weight: 300;
+  color: #364652;
+  margin: 40px 0px 40px 0px
+}
+
+.log-book-content {
+  display: flex;
 }
 
 .log-list {
@@ -57,7 +70,6 @@
   height: 100%;
   width: 80vw;
   max-width: 650px;
-  overflow: auto;
 }
 
 .log-list-item {
@@ -68,6 +80,8 @@
   align-items: center;
   background-color: #ffffff;
   color: #364652;
+  font-weight: 600;
+  font-size: 1.5rem;
   border-radius: 7px;
   filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.4));
   height: 120px;
@@ -81,13 +95,16 @@
   transition: transform 0.5s;
 }
 
-.log-list-item h3 {
-  margin: 5px;
-  padding: 0;
-}
-
 .log-list-item-details {
   flex-grow: 1;
+}
+
+.log-list-item-details .country-region {
+  font-weight: 300;
+}
+
+.log-list-item-details .date {
+  font-weight: 300;
 }
 
 .log-list-item-image-container {
@@ -135,17 +152,34 @@
   bottom: 0;
 }
 
+.mapboxgl-popup-content {
+  color:  #364652;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+  font-size: 25px;
+  font-weight: 400;
+}
+
+
 .sidebar-style {
   display: inline-block;
   position: absolute;
   top: 0;
-  left: 0;
-  margin: 12px;
-  background-color: #404040;
-  color: #ffffff;
+  right: 0;
+  margin: 10px;
+  color: #fecf12;
   z-index: 1 !important;
   padding: 6px;
-  font-weight: bold;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+  font-size: 25px;
+  font-weight: 500;
 }
 
 .modal-container {
@@ -173,6 +207,9 @@
 }
 
 .close-modal-button {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
   font-weight: bold;
   border-style: none;
   align-self: flex-start;
@@ -186,7 +223,11 @@
 }
 
 .modal-content {
-  padding: 40px;
+  padding: 0px 40px 40px 40px;
+}
+
+.modal-content h1 {
+  margin-top: 0px;
 }
 
 .new-log-form-item {
@@ -194,13 +235,87 @@
   flex-direction: column;
 }
 
+.new-log-form-item label{
+  font-size: 20px;
+}
+
+.new-log-form-item input{
+  margin: 10px 0px 10px 0px;
+  padding-left: 10px;
+  border: none;
+  border-radius: 5px;
+  height: 30px;
+  filter: drop-shadow(0 0 3px rgba(0,0,0, 0.6));
+  font-size: 17px;
+  font-weight: bold;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+
+.custom-style-file-input {
+  text-align: center;
+  font-size: 17px !important;
+  margin: 10px 0px 10px 0px;
+  background-color: #2c248d;
+  color: #eeeeee;
+  height: 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: color, 0.5s;
+}
+
+.custom-style-file-input:hover {
+  background-color: #fecf12;
+  color: #364652;
+}
+
+#photos {
+  display: none;
+}
+
+.submit-btn{
+  background-color: #2c248d;
+  color: #eeeeee;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: color, 0.5s;
+}
+
+.submit-btn:hover {
+  background-color: #fecf12;
+  color: #364652;
+}
+
+.notes-input {
+  margin: 10px 0px 10px 0px;
+  padding: 10px;
+  height: 200px;
+  resize: none;
+  border: none;
+  border-radius: 5px;
+  filter: drop-shadow(0 0 3px rgba(0,0,0, 0.6));
+  font-size: 17px;
+  font-weight: bold;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+
 .photo-preview {
+  margin: 10px 0px 10px 0px;
   display: flex;
   flex-wrap: wrap;
   overflow-y: scroll;
   background-color: #ffffff;
   height: 200px;
   width: 100%;
+  border-radius: 5px;
+  filter: drop-shadow(0 0 3px rgba(0,0,0, 0.6));
 }
 
 .photo-component{
@@ -208,5 +323,11 @@
 }
 
 .photo-component-image {
+  margin: 10px;
   width: 100%;
+}
+
+.photo-preview .photo-component-image {
+  margin: 10px;
+  width: 50%;
 }
