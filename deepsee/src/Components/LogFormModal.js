@@ -30,6 +30,19 @@ function LogFormModal(props) {
     formData.append("notes", e.target.notes.value);
     formData.append("photos", e.target.photos.files[0]);
     ApiClient.postLog(formData).then(() => props.makeLogList());
+
+    e.target.country.value = null;
+    e.target.region.value = null;
+    e.target.diveSite.value = null;
+    e.target.date.value = null;
+    e.target.maxDepth.value = null;
+    e.target.avgDepth.value = null;
+    e.target.diveTime.value = null;
+    e.target.temp.value = null;
+    e.target.visibility.value = null;
+    e.target.notes.value = null;
+    e.target.photos.files = null;
+    document.getElementById("photo-preview").innerHTML(null);
   }
 
   return (
@@ -79,13 +92,13 @@ function LogFormModal(props) {
               className="notes-input"
             ></textarea>
             <label>Photos: </label>
-            <div className="photo-preview">
+            <div id="photo-preview" className="photo-preview">
               {photoPreviews.map((photo) => (
                 <DiveSitePhoto
                   key={photo}
                   photo={photo}
                   className="photo-preview-item"
-                />
+                /> //This needs to be a new component
               ))}
             </div>
             <label htmlFor="photos" className="custom-style-file-input">
