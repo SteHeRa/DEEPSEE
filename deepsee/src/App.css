@@ -264,6 +264,10 @@
   transition: transform 0.5s;
 }
 
+.close-modal-button:focus {
+  outline: none;
+}
+
 .modal-content {
   padding: 0px 40px 40px 40px;
 }
