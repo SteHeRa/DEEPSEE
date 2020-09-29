@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 function LandingPage () {
   return(
@@ -15,7 +16,7 @@ function LandingPage () {
         <input></input>
         <input className="submit-btn" type="submit"/>
       </form>
-      <div className="have-account">already have an account? <a href="">Log In</a></div>
+      <div className="have-account">already have an account? <Link to="/log-in">Log In</Link></div>
     </div>
   )
 }
