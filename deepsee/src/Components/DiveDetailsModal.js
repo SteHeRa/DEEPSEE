@@ -1,6 +1,10 @@
 import React from "react";
 
 function DiveDetailsModal(props) {
+  function openImage(url) {
+    window.open(url);
+  }
+
   return (
     <div className="modal-container" onClick={() => props.closeModal()}>
       <div
@@ -30,7 +34,11 @@ function DiveDetailsModal(props) {
             </div>
             <div>Notes:</div>
             <div className="dive-notes">{props.dive.notes}</div>
-            <img className="photo-component-image" src={props.dive.photos} />
+            <img
+              className="photo-component-image"
+              src={props.dive.photos}
+              onClick={() => openImage(props.dive.photos)}
+            />
           </div>
         </div>
       </div>

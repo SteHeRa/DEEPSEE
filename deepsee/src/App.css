@@ -377,6 +377,7 @@
 .photo-component-image {
   margin: 10px;
   width: 100%;
+  cursor: pointer;
 }
 
 .photo-data {
