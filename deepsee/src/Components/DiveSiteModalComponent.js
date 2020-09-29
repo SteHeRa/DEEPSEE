@@ -32,7 +32,7 @@ function DiveSiteModal({ closeModal, diveSite }) {
         </button>
         <div className="modal-content">
           {photos.map((photo) => (
-            <DiveSitePhoto key={photo} photo={photo} />
+            <DiveSitePhoto key={photo.URL} photo={photo} />
           ))}
         </div>
       </div>
