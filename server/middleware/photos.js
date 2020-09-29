@@ -8,13 +8,16 @@ async function postImages (req, res, next) {
     try {
       const file = dataUri(req).content;
 
-      const uploadedPhoto = await uploader.upload(file);
+      const uploadedPhoto = await uploader.upload(file, {folder: "DEEPSEE"} );
         const photoLink = uploadedPhoto.url;
         const savedImage = await Photo.create({
           URL: photoLink,
           country: req.body.country,
           region: req.body.region,
-          diveSite: req.body.diveSite
+          diveSite: req.body.diveSite,
+          date: req.body.date,
+          temp: req.body.temp ? req.body.temp : "",
+          visibility: req.body.visibility ? req.body.visibility: ""
         });
         req.body.photos = [savedImage.URL];
         req.body.email = "test";

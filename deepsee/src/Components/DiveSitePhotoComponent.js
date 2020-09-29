@@ -5,7 +5,7 @@ function DiveSitePhoto({ photo }) {
     <div className="photo-component">
       <img
         className="photo-component-image"
-        src={photo}
+        src={photo.URL}
         alt="Image from dive site"
       />
     </div>

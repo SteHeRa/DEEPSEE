@@ -7,6 +7,9 @@ const photoSchema = new Schema({
   country: {type: String, required: [true, 'Photo requires Country']},
   region: {type: String, required: [true, 'Photo requires Region']},
   diveSite: {type: String, required: [true, 'Photo requires Dive Site']},
+  date: {type: Number, required: [true, 'Photo requires Date']},
+  temp: {type: String},
+  visibility: {type: String},
 });
 
 module.exports = mongoose.model('Photo', photoSchema);
