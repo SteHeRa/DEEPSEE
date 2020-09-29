@@ -22,6 +22,9 @@ function LogFormModal(props) {
     formData.append("region", e.target.region.value);
     formData.append("diveSite", e.target.diveSite.value);
     formData.append("date", e.target.date.value);
+    formData.append("maxDepth", e.target.maxDepth.value);
+    formData.append("avgDepth", e.target.avgDepth.value);
+    formData.append("diveTime", e.target.diveTime.value);
     formData.append("temp", e.target.temp.value);
     formData.append("visibility", e.target.visibility.value);
     formData.append("notes", e.target.notes.value);
@@ -54,6 +57,12 @@ function LogFormModal(props) {
             <input type="text" name="diveSite" defaultValue="" />
             <label htmlFor="date">Date: </label>
             <input type="date" name="date" defaultValue="" />
+            <label htmlFor="maxDepth">Maximum Depth: </label>
+            <input type="text" name="maxDepth" defaultValue="" />
+            <label htmlFor="avgDepth">Average Depth: </label>
+            <input type="text" name="avgDepth" defaultValue="" />
+            <label htmlFor="diveTime">Dive Time: </label>
+            <input type="text" name="diveTime" defaultValue="" />
             <label htmlFor="temp">Temperature: </label>
             <input type="text" name="temp" defaultValue="" />
             <label htmlFor="visibility">Visibility: </label>
