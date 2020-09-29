@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 import ApiClient from "../services/ApiClient";
 
-import LogList from "./LogListComponent";
-import LogFormModal from "./LogFormModal";
-import DiveDetailsModal from "./DiveDetailsModal";
+import LogList from "../Components/LogListComponent";
+import LogFormModal from "../Components/LogFormModal";
+import DiveDetailsModal from "../Components/DiveDetailsModal";
 
 function Log() {
   const [logData, setLogData] = useState([]);

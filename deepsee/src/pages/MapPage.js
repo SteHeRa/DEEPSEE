@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import ReactDOM from 'react-dom';
 import mapboxgl from 'mapbox-gl';
-import DiveSiteModal from './DiveSiteModalComponent';
+import DiveSiteModal from '../Components/DiveSiteModalComponent';
 
 function Map () {
 

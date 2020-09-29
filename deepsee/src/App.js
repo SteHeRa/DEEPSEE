@@ -8,10 +8,10 @@ import {
 import './App.css';
 
 import Nav from './Components/NavComponent'
-import LandingPage from './Components/LandingPage';
-import LogInPage from './Components/LogInComponent';
-import Log from './Components/LogBookComponent';
-import Map from './Components/MapComponent';
+import LandingPage from './pages/LandingPage';
+import LogInPage from './pages/LogInPage';
+import Log from './pages/LogBookPage';
+import Map from './pages/MapPage';
 
 function App () {
 
