@@ -13,7 +13,6 @@ export default {
       method: 'POST',
       body: logData
     })
-    .then(res => res.json())
   },
 
   getPhotos: async (diveSite) => {
