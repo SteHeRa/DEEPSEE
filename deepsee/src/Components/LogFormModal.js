@@ -9,7 +9,7 @@ function LogFormModal(props) {
   function handleChange(e) {
     const photos = [];
     for (let i = 0; i < e.target.files.length; i++) {
-      photos.push(URL.createObjectURL(e.target.files[i]));
+      photos.push({ URL: URL.createObjectURL(e.target.files[i]) }); //handing in object because of how DiveSitePhoto component expects props
     }
     setPhotoPreviews(photos);
   }
