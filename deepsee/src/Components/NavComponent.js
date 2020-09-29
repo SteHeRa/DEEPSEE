@@ -1,7 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function Nav(props) {
+
   return (
     <div className="nav">
       <div className="navigation-buttons">
@@ -9,7 +10,7 @@ function Nav(props) {
           <button
             onClick={() => props.logClick()}
             style={{
-              backgroundColor: `${props.showLog ? "#fecf12" : "#eeeeee"}`,
+              backgroundColor: `${useLocation().pathname == "/log-book" ? "#fecf12" : "#eeeeee"}`,
             }}
           >
             Log
@@ -19,7 +20,7 @@ function Nav(props) {
           <button
             onClick={() => props.mapClick()}
             style={{
-              backgroundColor: `${props.showLog ? "#eeeeee" : "#fecf12"}`,
+              backgroundColor: `${useLocation().pathname == "/map" ? "#fecf12" : "#eeeeee"}`,
             }}
           >
             Map
