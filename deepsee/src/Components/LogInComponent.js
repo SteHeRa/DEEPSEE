@@ -1,15 +1,22 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {Link, useHistory} from 'react-router-dom';
 
 function LogInPage () {
+
+  let history = useHistory();
+
+  function goToLogBook () {
+    history.push("/log-book");
+  }
+
   return(
     <div className="landing-page">
     <h1>Log In</h1>
-    <form className="form-item">
+    <form className="form-item" onSubmit={goToLogBook}>
       <label>Email:</label>
-      <input></input>
+      <input type="text"></input>
       <label>Password:</label>
-      <input></input>
+      <input type="password"></input>
       <input className="submit-btn" type="submit"/>
     </form>
     <div className="have-account">don&apos;t have an account? <Link to="/">Create Account</Link></div>
