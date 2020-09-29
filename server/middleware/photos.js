@@ -15,14 +15,15 @@ async function postImages (req, res, next) {
           country: req.body.country,
           region: req.body.region,
           diveSite: req.body.diveSite,
-          date: req.body.date,
-          temp: req.body.temp ? req.body.temp : "",
-          visibility: req.body.visibility ? req.body.visibility: ""
+          date: new Date(req.body.date),
+          temp: req.body.temp ? req.body.temp : null,
+          visibility: req.body.visibility ? req.body.visibility: null
         });
         req.body.photos = [savedImage.URL];
         req.body.email = "test";
         next();
     } catch (err) {
+      console.log('---> error saving photo to database', err.stack)
       res.status(500)
       res.send({err, message: 'Server failed to upload your image'});
     }
