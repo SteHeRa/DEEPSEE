@@ -365,12 +365,36 @@
 }
 
 .photo-component{
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px 15px 15px 15px;
+  margin-bottom: 40px;
   filter: drop-shadow(0 0 6px rgba(0,0,0, 0.6));
 }
 
 .photo-component-image {
   margin: 10px;
   width: 100%;
+}
+
+.photo-data {
+  padding-top: 10px;
+  align-self: flex-start;
+  font-size: 20px;
+}
+
+.photo-data div{
+  margin: 10px 0px 10px 0px
+}
+
+.photo-date {
+  font-weight: 200;
+}
+
+.photo-conditions {
+  font-weight: 400;
 }
 
 .photo-preview .photo-component-image {
