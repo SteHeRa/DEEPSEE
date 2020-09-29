@@ -4,6 +4,8 @@ import { Link, useLocation } from "react-router-dom";
 function Nav(props) {
   return (
     <div className="nav">
+      <img className="nav-logo" src="DEEPSEE_logo.png" />
+      <div className="nav-logo-text">DEEPSEE</div>
       <div className="navigation-buttons">
         <Link to="/log-book">
           <button
@@ -30,6 +32,7 @@ function Nav(props) {
           </button>
         </Link>
       </div>
+      <div></div>
     </div>
   );
 }

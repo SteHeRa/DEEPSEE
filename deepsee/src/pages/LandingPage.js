@@ -4,6 +4,10 @@ import { Link } from "react-router-dom";
 function LandingPage() {
   return (
     <div className="landing-page">
+      <div className="logo">
+      <div>DEEPSEE</div>
+      <img src="DEEPSEE_logo.png" />
+      </div>
       <h1>Create Account</h1>
       <form className="form-item">
         <label htmlFor="firstName">First Name:</label>

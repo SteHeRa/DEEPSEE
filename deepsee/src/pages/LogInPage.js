@@ -10,6 +10,10 @@ function LogInPage() {
 
   return (
     <div className="landing-page">
+      <div className="logo">
+        <div>DEEPSEE</div>
+        <img src="DEEPSEE_logo.png" />
+      </div>
       <h1>Log In</h1>
       <form className="form-item" onSubmit={goToLogBook}>
         <label htmlFor="email">Email:</label>
