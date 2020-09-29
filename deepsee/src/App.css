@@ -53,8 +53,18 @@
   font-weight: 400;
 }
 
+.landing-page h1{
+  filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.6));
+}
+
+.landing-page .form-item label {
+  font-weight: 500;
+  filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.6));
+}
+
 .have-account {
   color: #eeeeee;
+  filter: drop-shadow(0 0 4px rgba(0, 0, 0, 1));
 }
 
 .have-account a {
