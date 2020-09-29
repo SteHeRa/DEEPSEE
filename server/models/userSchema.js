@@ -14,6 +14,7 @@ const userSchema = new Schema({
     bodyOfWater: {type: String},
     maxDepth: {type: String},
     avgDepth: {type: String},
+    diveTime: {type: String},
     temp: {type: String},
     waterType: {type: String},
     visibility: {type: String},
