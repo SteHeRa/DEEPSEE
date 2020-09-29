@@ -377,3 +377,31 @@
   margin: 10px;
   width: 50%;
 }
+
+.dive-details {
+  background-color: #ffffff;
+  padding: 15px;
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  filter: drop-shadow(0 0 6px rgba(0,0,0, 0.4));
+}
+
+.dive-details div {
+  margin: 5px 0px 5px 0px;
+}
+
+.dive-stats {
+  font-weight: 200;
+  padding-left: 20px;
+}
+
+.dive-notes {
+  font-weight: 200;
+}
+
+.dive-details img {
+  align-self: center;
+  filter: drop-shadow(0 0 6px rgba(0,0,0, 0.4));
+}
