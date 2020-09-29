@@ -62,7 +62,12 @@ function LogFormModal(props) {
             <label htmlFor="avgDepth">Average Depth (m): </label>
             <input type="text" name="avgDepth" defaultValue="" />
             <label htmlFor="diveTime">Dive Time: </label>
-            <input type="text" name="diveTime" defaultValue="" placeholder="0h:0m"/>
+            <input
+              type="text"
+              name="diveTime"
+              defaultValue=""
+              placeholder="0h:0m"
+            />
             <label htmlFor="temp">Temperature (&deg;C): </label>
             <input type="text" name="temp" defaultValue="" />
             <label htmlFor="visibility">Visibility (m): </label>

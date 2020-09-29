@@ -32,7 +32,7 @@ function DiveDetailsModal(props) {
             <div className="dive-notes">{props.dive.notes}</div>
             <img className="photo-component-image" src={props.dive.photos} />
           </div>
-          </div>
+        </div>
       </div>
     </div>
   );
