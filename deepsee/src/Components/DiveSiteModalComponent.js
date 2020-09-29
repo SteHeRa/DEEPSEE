@@ -13,6 +13,7 @@ function DiveSiteModal({ closeModal, diveSite }) {
   function makePhotoList(diveSite) {
     ApiClient.getPhotos(diveSite).then((photos) => {
       if (photos[0] !== undefined) {
+        photos.sort((a, b) => b.date - a.date);
         setPhotos(photos);
       } else setPhotos([]);
     });
