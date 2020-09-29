@@ -13,10 +13,10 @@ function Map () {
 
     useEffect( () => {
 
-    mapboxgl.accessToken = 'pk.eyJ1Ijoic3RlaGVyYSIsImEiOiJja2ZmOTYxNTgwY2sxMnJvM3R3bGhwbW05In0.nzQVNouROweGSb7p6dw2cA'; //TODO store in server
+    mapboxgl.accessToken = process.env.REACT_APP_MAP_ACCESS;
     const map = new mapboxgl.Map({
       container: mapContainer.current,
-      style: 'mapbox://styles/stehera/ckffagb3k12jh1api1n2lau45',
+      style: process.env.REACT_APP_MAP_STYLE,
       center: [lng, lat],
       zoom: zoom
     });
