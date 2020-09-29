@@ -13,10 +13,10 @@ function LogInPage () {
     <div className="landing-page">
     <h1>Log In</h1>
     <form className="form-item" onSubmit={goToLogBook}>
-      <label>Email:</label>
-      <input type="text"></input>
-      <label>Password:</label>
-      <input type="password"></input>
+      <label htmlFor="email">Email:</label>
+      <input type="text" name="email" defaultValue=""></input>
+      <label htmlFor="password">Password:</label>
+      <input type="password" name="password" defaultValue=""></input>
       <input className="submit-btn" type="submit"/>
     </form>
     <div className="have-account">don&apos;t have an account? <Link to="/">Create Account</Link></div>
