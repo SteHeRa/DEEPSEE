@@ -113,6 +113,7 @@
   height: calc(100vh - var(--navheight));
   width: 100%;
   overflow-y: scroll;
+  filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.4));
 }
 
 .log-book-header {
@@ -214,6 +215,7 @@
   right: 0;
   left: 0;
   bottom: 0;
+  filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.4));
 }
 
 .mapboxgl-popup-content {
