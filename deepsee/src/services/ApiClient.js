@@ -1,4 +1,4 @@
-const BASE_URL = process.env.REACT_APP_SERVER_URL; //move into .env
+const BASE_URL = process.env.REACT_APP_SERVER_URL;
 
 export default {
 
