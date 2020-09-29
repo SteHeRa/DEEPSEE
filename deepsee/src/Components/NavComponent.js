@@ -5,7 +5,7 @@ function Nav(props) {
   return (
     <div className="nav">
       <div className="navigation-buttons">
-        <Link to="/log">
+        <Link to="/log-book">
           <button
             onClick={() => props.logClick()}
             style={{
