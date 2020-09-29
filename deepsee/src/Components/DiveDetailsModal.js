@@ -16,12 +16,23 @@ function DiveDetailsModal(props) {
           X
         </button>
         <div className="modal-content">
-          <h3>{props.dive.diveSite}</h3>
-          <h3>{`${props.dive.country} - ${props.dive.region}`}</h3>
-          <h3>{new Date(props.dive.date).toDateString()}</h3>
-          <p>{props.dive.notes}</p>
-          <img className="photo-component-image" src={props.dive.photos} />
-        </div>
+          <div className="dive-details">
+            <div>{props.dive.diveSite}</div>
+            <div>{`${props.dive.country} - ${props.dive.region}`}</div>
+            <div>{new Date(props.dive.date).toDateString()}</div>
+            <div>Dive Stats:</div>
+            <div className="dive-stats">
+              <div> Max Depth: {props.dive.maxDepth} m</div>
+              <div> Avg Depth: {props.dive.avgDepth} m</div>
+              <div> Dive Time: {props.dive.diveTime}</div>
+              <div> Temp: {props.dive.temp}&deg;C</div>
+              <div> Visibility: {props.dive.visibility} m</div>
+            </div>
+            <div>Notes:</div>
+            <div className="dive-notes">{props.dive.notes}</div>
+            <img className="photo-component-image" src={props.dive.photos} />
+          </div>
+          </div>
       </div>
     </div>
   );
