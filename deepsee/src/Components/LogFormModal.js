@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ApiClient from "../services/ApiClient";
 
-import DiveSitePhoto from "./DiveSitePhotoComponent";
+import PhotoPreviewComponent from "./PhotoPreviewComponent";
 
 function LogFormModal(props) {
   const [photoPreviews, setPhotoPreviews] = useState([]);
@@ -42,7 +42,7 @@ function LogFormModal(props) {
     e.target.visibility.value = null;
     e.target.notes.value = null;
     e.target.photos.files = null;
-    document.getElementById("photo-preview").innerHTML(null);
+    document.getElementById("photo-preview").innerHTML = null;
   }
 
   return (
@@ -94,7 +94,7 @@ function LogFormModal(props) {
             <label>Photos: </label>
             <div id="photo-preview" className="photo-preview">
               {photoPreviews.map((photo) => (
-                <DiveSitePhoto
+                <PhotoPreviewComponent
                   key={photo}
                   photo={photo}
                   className="photo-preview-item"

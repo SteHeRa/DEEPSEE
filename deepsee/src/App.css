@@ -406,6 +406,7 @@
   margin: 10px;
   width: 100%;
   cursor: pointer;
+  filter: drop-shadow(0 0 6px rgba(0,0,0, 0.6));
 }
 
 .photo-data {
