@@ -22,6 +22,8 @@ function LogFormModal(props) {
     formData.append("region", e.target.region.value);
     formData.append("diveSite", e.target.diveSite.value);
     formData.append("date", e.target.date.value);
+    formData.append("temp", e.target.temp.value);
+    formData.append("visibility", e.target.visibility.value);
     formData.append("notes", e.target.notes.value);
     formData.append("photos", e.target.photos.files[0]);
     ApiClient.postLog(formData).then(() => props.makeLogList());
@@ -52,6 +54,10 @@ function LogFormModal(props) {
             <input type="text" name="diveSite" defaultValue="" />
             <label htmlFor="date">Date: </label>
             <input type="date" name="date" defaultValue="" />
+            <label htmlFor="temp">Temperature: </label>
+            <input type="text" name="temp" defaultValue="" />
+            <label htmlFor="visibility">Visibility: </label>
+            <input type="text" name="visibility" defaultValue="" />
             <label htmlFor="notes">Notes: </label>
             <textarea
               id="notes"
