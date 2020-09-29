@@ -49,23 +49,23 @@ function LogFormModal(props) {
         <div className="modal-content">
           <form className="form-item" onSubmit={handleSubmit}>
             <h1>Add a new dive</h1>
-            <label htmlFor="country">Country: </label>
+            <label htmlFor="country">Country (required): </label>
             <input type="text" name="country" defaultValue="" />
-            <label htmlFor="region">Region: </label>
+            <label htmlFor="region">Region (required): </label>
             <input type="text" name="region" defaultValue="" />
-            <label htmlFor="diveSite">Dive Site: </label>
+            <label htmlFor="diveSite">Dive Site (required): </label>
             <input type="text" name="diveSite" defaultValue="" />
-            <label htmlFor="date">Date: </label>
+            <label htmlFor="date">Date (required): </label>
             <input type="date" name="date" defaultValue="" />
-            <label htmlFor="maxDepth">Maximum Depth: </label>
+            <label htmlFor="maxDepth">Maximum Depth (m): </label>
             <input type="text" name="maxDepth" defaultValue="" />
-            <label htmlFor="avgDepth">Average Depth: </label>
+            <label htmlFor="avgDepth">Average Depth (m): </label>
             <input type="text" name="avgDepth" defaultValue="" />
             <label htmlFor="diveTime">Dive Time: </label>
-            <input type="text" name="diveTime" defaultValue="" />
-            <label htmlFor="temp">Temperature: </label>
+            <input type="text" name="diveTime" defaultValue="" placeholder="0h:0m"/>
+            <label htmlFor="temp">Temperature (&deg;C): </label>
             <input type="text" name="temp" defaultValue="" />
-            <label htmlFor="visibility">Visibility: </label>
+            <label htmlFor="visibility">Visibility (m): </label>
             <input type="text" name="visibility" defaultValue="" />
             <label htmlFor="notes">Notes: </label>
             <textarea
