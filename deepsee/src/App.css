@@ -394,6 +394,7 @@
 
 .photo-component{
   background-color: #ffffff;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
