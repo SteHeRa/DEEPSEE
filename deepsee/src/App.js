@@ -32,17 +32,16 @@ function App () {
   return (
     <div className="app">
       <Router>
-
-      <Nav logClick={() => handleLogClick()} mapClick={() => handleMapClick()} showLog={isShowLog}/>
-
       <Switch>
         <Route path="/log-in">
           <LogInPage />
         </Route>
         <Route path="/log-book">
+          <Nav logClick={() => handleLogClick()} mapClick={() => handleMapClick()} showLog={isShowLog}/>
           <Log />
         </Route>
         <Route path="/map">
+          <Nav logClick={() => handleLogClick()} mapClick={() => handleMapClick()} showLog={isShowLog}/>
           <Map />
         </Route>
         <Route path="/">
