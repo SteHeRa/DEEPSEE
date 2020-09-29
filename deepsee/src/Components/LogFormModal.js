@@ -36,7 +36,7 @@ function LogFormModal (props) {
         }}>
           <button className="close-modal-button" onClick={() => props.closeModal()}>X</button>
           <div className="modal-content">
-            <form className="new-log-form-item"  onSubmit={handleSubmit}>
+            <form className="form-item"  onSubmit={handleSubmit}>
               <h1>Add a new dive</h1>
               <label htmlFor="country">Country: </label>
               <input type="text" name="country" defaultValue=""/>
