@@ -58,9 +58,7 @@ function Log() {
           <div id="add-dive-button-plus">+</div>
         </div>
         <div>
-          {logData === [] ? (
-            <LogList log={logData} openDetails={(dive) => openDetails(dive)} />
-          ) : null}
+          <LogList log={logData} openDetails={(dive) => openDetails(dive)} />
         </div>
       </div>
     </div>

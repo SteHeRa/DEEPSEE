@@ -2,7 +2,9 @@ import React from "react";
 import LogListItem from "./LogListItemComponent";
 
 function LogList(props) {
-  return (
+  if (props.log.length < 1) {
+    return null;
+  } else return (
     <div className="log-list">
       {props.log.map((dive) => {
         return (
