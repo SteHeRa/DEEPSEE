@@ -6,12 +6,13 @@ function PhotoPreviewComponent({ photo }) {
   }
 
   return (
-      <img
-        className="photo-component-image"
-        src={photo.URL}
-        alt="Image from dive site"
-        onClick={() => openImage(photo.URL)}
-      />
+    <img
+      aria-label="photo preview image"
+      className="photo-component-image"
+      src={photo.URL}
+      alt="Image from dive site"
+      onClick={() => openImage(photo.URL)}
+    />
   );
 }
 
