@@ -1,0 +1,384 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LogFormModal should render correctly 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="modal-container"
+      >
+        <div
+          class="modal"
+        >
+          <button
+            class="close-modal-button"
+          >
+            X
+          </button>
+          <div
+            class="modal-content"
+          >
+            <form
+              class="form-item"
+            >
+              <h1>
+                Add a new dive
+              </h1>
+              <label
+                for="country"
+              >
+                Country (required): 
+              </label>
+              <input
+                aria-label="country input"
+                name="country"
+                type="text"
+                value=""
+              />
+              <label
+                for="region"
+              >
+                Region (required): 
+              </label>
+              <input
+                aria-label="region input"
+                name="region"
+                type="text"
+                value=""
+              />
+              <label
+                for="diveSite"
+              >
+                Dive Site (required): 
+              </label>
+              <input
+                aria-label="dive site input"
+                name="diveSite"
+                type="text"
+                value=""
+              />
+              <label
+                for="date"
+              >
+                Date (required): 
+              </label>
+              <input
+                aria-label="date input"
+                name="date"
+                type="date"
+                value=""
+              />
+              <label
+                for="maxDepth"
+              >
+                Maximum Depth (m): 
+              </label>
+              <input
+                aria-label="max depth input"
+                name="maxDepth"
+                type="text"
+                value=""
+              />
+              <label
+                for="avgDepth"
+              >
+                Average Depth (m): 
+              </label>
+              <input
+                aria-label="average depth input"
+                name="avgDepth"
+                type="text"
+                value=""
+              />
+              <label
+                for="diveTime"
+              >
+                Dive Time: 
+              </label>
+              <input
+                aria-label="dive time input"
+                name="diveTime"
+                placeholder="0h:0m"
+                type="text"
+                value=""
+              />
+              <label
+                for="temp"
+              >
+                Temperature (°C): 
+              </label>
+              <input
+                aria-label="temperature input"
+                name="temp"
+                type="text"
+                value=""
+              />
+              <label
+                for="visibility"
+              >
+                Visibility (m): 
+              </label>
+              <input
+                aria-label="visibility input"
+                name="visibility"
+                type="text"
+                value=""
+              />
+              <label
+                for="notes"
+              >
+                Notes: 
+              </label>
+              <textarea
+                aria-label="notes input"
+                class="notes-input"
+                id="notes"
+              />
+              <label>
+                Photos: 
+              </label>
+              <div
+                aria-label="photo preview"
+                class="photo-preview"
+                id="photo-preview"
+              />
+              <label
+                class="custom-style-file-input"
+                for="photos"
+              >
+                Add Photos
+                <input
+                  accept="image/png, image/jpeg"
+                  aria-label="add photo input"
+                  id="photos"
+                  name="photos"
+                  type="file"
+                />
+              </label>
+              <input
+                aria-label="submit button"
+                class="submit-btn"
+                type="submit"
+              />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="modal-container"
+    >
+      <div
+        class="modal"
+      >
+        <button
+          class="close-modal-button"
+        >
+          X
+        </button>
+        <div
+          class="modal-content"
+        >
+          <form
+            class="form-item"
+          >
+            <h1>
+              Add a new dive
+            </h1>
+            <label
+              for="country"
+            >
+              Country (required): 
+            </label>
+            <input
+              aria-label="country input"
+              name="country"
+              type="text"
+              value=""
+            />
+            <label
+              for="region"
+            >
+              Region (required): 
+            </label>
+            <input
+              aria-label="region input"
+              name="region"
+              type="text"
+              value=""
+            />
+            <label
+              for="diveSite"
+            >
+              Dive Site (required): 
+            </label>
+            <input
+              aria-label="dive site input"
+              name="diveSite"
+              type="text"
+              value=""
+            />
+            <label
+              for="date"
+            >
+              Date (required): 
+            </label>
+            <input
+              aria-label="date input"
+              name="date"
+              type="date"
+              value=""
+            />
+            <label
+              for="maxDepth"
+            >
+              Maximum Depth (m): 
+            </label>
+            <input
+              aria-label="max depth input"
+              name="maxDepth"
+              type="text"
+              value=""
+            />
+            <label
+              for="avgDepth"
+            >
+              Average Depth (m): 
+            </label>
+            <input
+              aria-label="average depth input"
+              name="avgDepth"
+              type="text"
+              value=""
+            />
+            <label
+              for="diveTime"
+            >
+              Dive Time: 
+            </label>
+            <input
+              aria-label="dive time input"
+              name="diveTime"
+              placeholder="0h:0m"
+              type="text"
+              value=""
+            />
+            <label
+              for="temp"
+            >
+              Temperature (°C): 
+            </label>
+            <input
+              aria-label="temperature input"
+              name="temp"
+              type="text"
+              value=""
+            />
+            <label
+              for="visibility"
+            >
+              Visibility (m): 
+            </label>
+            <input
+              aria-label="visibility input"
+              name="visibility"
+              type="text"
+              value=""
+            />
+            <label
+              for="notes"
+            >
+              Notes: 
+            </label>
+            <textarea
+              aria-label="notes input"
+              class="notes-input"
+              id="notes"
+            />
+            <label>
+              Photos: 
+            </label>
+            <div
+              aria-label="photo preview"
+              class="photo-preview"
+              id="photo-preview"
+            />
+            <label
+              class="custom-style-file-input"
+              for="photos"
+            >
+              Add Photos
+              <input
+                accept="image/png, image/jpeg"
+                aria-label="add photo input"
+                id="photos"
+                name="photos"
+                type="file"
+              />
+            </label>
+            <input
+              aria-label="submit button"
+              class="submit-btn"
+              type="submit"
+            />
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
