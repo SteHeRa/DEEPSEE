@@ -63,36 +63,82 @@ function LogFormModal(props) {
           <form className="form-item" onSubmit={handleSubmit}>
             <h1>Add a new dive</h1>
             <label htmlFor="country">Country (required): </label>
-            <input type="text" name="country" defaultValue="" />
+            <input
+              aria-label="country input"
+              type="text"
+              name="country"
+              defaultValue=""
+            />
             <label htmlFor="region">Region (required): </label>
-            <input type="text" name="region" defaultValue="" />
+            <input
+              aria-label="region input"
+              type="text"
+              name="region"
+              defaultValue=""
+            />
             <label htmlFor="diveSite">Dive Site (required): </label>
-            <input type="text" name="diveSite" defaultValue="" />
+            <input
+              aria-label="dive site input"
+              type="text"
+              name="diveSite"
+              defaultValue=""
+            />
             <label htmlFor="date">Date (required): </label>
-            <input type="date" name="date" defaultValue="" />
+            <input
+              aria-label="date input"
+              type="date"
+              name="date"
+              defaultValue=""
+            />
             <label htmlFor="maxDepth">Maximum Depth (m): </label>
-            <input type="text" name="maxDepth" defaultValue="" />
+            <input
+              aria-label="max depth input"
+              type="text"
+              name="maxDepth"
+              defaultValue=""
+            />
             <label htmlFor="avgDepth">Average Depth (m): </label>
-            <input type="text" name="avgDepth" defaultValue="" />
+            <input
+              aria-label="average depth input"
+              type="text"
+              name="avgDepth"
+              defaultValue=""
+            />
             <label htmlFor="diveTime">Dive Time: </label>
             <input
+              aria-label="dive time input"
               type="text"
               name="diveTime"
               defaultValue=""
               placeholder="0h:0m"
             />
             <label htmlFor="temp">Temperature (&deg;C): </label>
-            <input type="text" name="temp" defaultValue="" />
+            <input
+              aria-label="temperature input"
+              type="text"
+              name="temp"
+              defaultValue=""
+            />
             <label htmlFor="visibility">Visibility (m): </label>
-            <input type="text" name="visibility" defaultValue="" />
+            <input
+              aria-label="visibility input"
+              type="text"
+              name="visibility"
+              defaultValue=""
+            />
             <label htmlFor="notes">Notes: </label>
             <textarea
+              aria-label="notes input"
               id="notes"
               defaultValue=""
               className="notes-input"
             ></textarea>
             <label>Photos: </label>
-            <div id="photo-preview" className="photo-preview">
+            <div
+              aria-label="photo preview"
+              id="photo-preview"
+              className="photo-preview"
+            >
               {photoPreviews.map((photo) => (
                 <PhotoPreviewComponent
                   key={photo}
@@ -104,6 +150,7 @@ function LogFormModal(props) {
             <label htmlFor="photos" className="custom-style-file-input">
               Add Photos
               <input
+                aria-label="add photo input"
                 type="file"
                 id="photos"
                 name="photos"
@@ -111,7 +158,11 @@ function LogFormModal(props) {
                 onChange={handleChange}
               />
             </label>
-            <input className="submit-btn" type="submit" />
+            <input
+              aria-label="submit button"
+              className="submit-btn"
+              type="submit"
+            />
           </form>
         </div>
       </div>
