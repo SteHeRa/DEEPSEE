@@ -31,4 +31,12 @@ describe("LogListItem", () => {
     ).toEqual(mockDive.photos[0]);
     expect(logListItem).toMatchSnapshot();
   });
+
+  it("calls openDetails on click", () => {
+    const openDetails = jest.fn();
+
+    render(<LogListItem dive={mockDive} openDetails={openDetails} />);
+    userEvent.click(screen.getByRole("img", { name: "log list item image" }));
+    expect(openDetails).toHaveBeenCalledTimes(1);
+  });
 });
