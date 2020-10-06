@@ -13,6 +13,7 @@ function LogListItem(props) {
       </div>
       <div className="log-list-item-image-container">
         <img
+          aria-label="log list item image"
           className="log-list-item-image"
           src={props.dive.photos[0]}
           alt="Dive Thumbnail"
