@@ -1,0 +1,666 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LogListComponent renders correctly 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="log-list"
+      >
+        <div
+          class="log-list-item"
+        >
+          <div
+            class="log-list-item-details"
+          >
+            <div
+              class="dive-site"
+            >
+              Cauldron
+            </div>
+            <div
+              class="country-region"
+            >
+              Indonesia - Komodo
+            </div>
+            <div
+              class="date"
+            >
+              Sat Sep 26 2020
+            </div>
+          </div>
+          <div
+            class="log-list-item-image-container"
+          >
+            <img
+              alt="Dive Thumbnail"
+              aria-label="log list item image"
+              class="log-list-item-image"
+              src="http://res.cloudinary.com/da5khewdo/image/upload/v1601393775/vzgbyetxphclmpnpl8ap.jpg"
+            />
+          </div>
+        </div>
+        <div
+          class="log-list-item"
+        >
+          <div
+            class="log-list-item-details"
+          >
+            <div
+              class="dive-site"
+            >
+              Cauldron
+            </div>
+            <div
+              class="country-region"
+            >
+              Indonesia - Komodo
+            </div>
+            <div
+              class="date"
+            >
+              Sun Sep 27 2020
+            </div>
+          </div>
+          <div
+            class="log-list-item-image-container"
+          >
+            <img
+              alt="Dive Thumbnail"
+              aria-label="log list item image"
+              class="log-list-item-image"
+              src="http://res.cloudinary.com/da5khewdo/image/upload/v1601394026/eqig0v1uu2v5rxcsnle9.jpg"
+            />
+          </div>
+        </div>
+        <div
+          class="log-list-item"
+        >
+          <div
+            class="log-list-item-details"
+          >
+            <div
+              class="dive-site"
+            >
+              Cauldron
+            </div>
+            <div
+              class="country-region"
+            >
+              Indonesia - Komodo
+            </div>
+            <div
+              class="date"
+            >
+              Mon Sep 28 2020
+            </div>
+          </div>
+          <div
+            class="log-list-item-image-container"
+          >
+            <img
+              alt="Dive Thumbnail"
+              aria-label="log list item image"
+              class="log-list-item-image"
+              src="http://res.cloudinary.com/da5khewdo/image/upload/v1601394155/jud3djhgbato0jk9qy4j.jpg"
+            />
+          </div>
+        </div>
+        <div
+          class="log-list-item"
+        >
+          <div
+            class="log-list-item-details"
+          >
+            <div
+              class="dive-site"
+            >
+              Cauldron
+            </div>
+            <div
+              class="country-region"
+            >
+              Indonesia - Komodo
+            </div>
+            <div
+              class="date"
+            >
+              Fri Sep 25 2020
+            </div>
+          </div>
+          <div
+            class="log-list-item-image-container"
+          >
+            <img
+              alt="Dive Thumbnail"
+              aria-label="log list item image"
+              class="log-list-item-image"
+              src="http://res.cloudinary.com/da5khewdo/image/upload/v1601394333/c2jvikle33qfzwymyrd5.jpg"
+            />
+          </div>
+        </div>
+        <div
+          class="log-list-item"
+        >
+          <div
+            class="log-list-item-details"
+          >
+            <div
+              class="dive-site"
+            >
+              Cauldron
+            </div>
+            <div
+              class="country-region"
+            >
+              Indonesia - Komodo
+            </div>
+            <div
+              class="date"
+            >
+              Thu Sep 10 2020
+            </div>
+          </div>
+          <div
+            class="log-list-item-image-container"
+          >
+            <img
+              alt="Dive Thumbnail"
+              aria-label="log list item image"
+              class="log-list-item-image"
+              src="http://res.cloudinary.com/da5khewdo/image/upload/v1601405770/aijqkfujo1mi9blimszh.jpg"
+            />
+          </div>
+        </div>
+        <div
+          class="log-list-item"
+        >
+          <div
+            class="log-list-item-details"
+          >
+            <div
+              class="dive-site"
+            >
+              Cauldron
+            </div>
+            <div
+              class="country-region"
+            >
+              Indonesia - Komodo
+            </div>
+            <div
+              class="date"
+            >
+              Wed Sep 16 2020
+            </div>
+          </div>
+          <div
+            class="log-list-item-image-container"
+          >
+            <img
+              alt="Dive Thumbnail"
+              aria-label="log list item image"
+              class="log-list-item-image"
+              src="http://res.cloudinary.com/da5khewdo/image/upload/v1601405903/apwgivkwu5c1c159kdkc.jpg"
+            />
+          </div>
+        </div>
+        <div
+          class="log-list-item"
+        >
+          <div
+            class="log-list-item-details"
+          >
+            <div
+              class="dive-site"
+            >
+              Cauldron
+            </div>
+            <div
+              class="country-region"
+            >
+              Indonesia - Komodo
+            </div>
+            <div
+              class="date"
+            >
+              Sat Sep 19 2020
+            </div>
+          </div>
+          <div
+            class="log-list-item-image-container"
+          >
+            <img
+              alt="Dive Thumbnail"
+              aria-label="log list item image"
+              class="log-list-item-image"
+              src="http://res.cloudinary.com/da5khewdo/image/upload/v1601411835/rzp1t2g5cv7admbtvfge.jpg"
+            />
+          </div>
+        </div>
+        <div
+          class="log-list-item"
+        >
+          <div
+            class="log-list-item-details"
+          >
+            <div
+              class="dive-site"
+            >
+              Cauldron
+            </div>
+            <div
+              class="country-region"
+            >
+              Indonesia - Komodo
+            </div>
+            <div
+              class="date"
+            >
+              Mon Sep 21 2020
+            </div>
+          </div>
+          <div
+            class="log-list-item-image-container"
+          >
+            <img
+              alt="Dive Thumbnail"
+              aria-label="log list item image"
+              class="log-list-item-image"
+              src="http://res.cloudinary.com/da5khewdo/image/upload/v1601412610/qipqyfnyfn7pjyc9kbpx.jpg"
+            />
+          </div>
+        </div>
+        <div
+          class="log-list-item"
+        >
+          <div
+            class="log-list-item-details"
+          >
+            <div
+              class="dive-site"
+            >
+              Cauldron
+            </div>
+            <div
+              class="country-region"
+            >
+              Indonesia - Komodo
+            </div>
+            <div
+              class="date"
+            >
+              Wed Sep 30 2020
+            </div>
+          </div>
+          <div
+            class="log-list-item-image-container"
+          >
+            <img
+              alt="Dive Thumbnail"
+              aria-label="log list item image"
+              class="log-list-item-image"
+              src="http://res.cloudinary.com/da5khewdo/image/upload/v1601413954/uwgxukhkdeng84l4rtng.jpg"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="log-list"
+    >
+      <div
+        class="log-list-item"
+      >
+        <div
+          class="log-list-item-details"
+        >
+          <div
+            class="dive-site"
+          >
+            Cauldron
+          </div>
+          <div
+            class="country-region"
+          >
+            Indonesia - Komodo
+          </div>
+          <div
+            class="date"
+          >
+            Sat Sep 26 2020
+          </div>
+        </div>
+        <div
+          class="log-list-item-image-container"
+        >
+          <img
+            alt="Dive Thumbnail"
+            aria-label="log list item image"
+            class="log-list-item-image"
+            src="http://res.cloudinary.com/da5khewdo/image/upload/v1601393775/vzgbyetxphclmpnpl8ap.jpg"
+          />
+        </div>
+      </div>
+      <div
+        class="log-list-item"
+      >
+        <div
+          class="log-list-item-details"
+        >
+          <div
+            class="dive-site"
+          >
+            Cauldron
+          </div>
+          <div
+            class="country-region"
+          >
+            Indonesia - Komodo
+          </div>
+          <div
+            class="date"
+          >
+            Sun Sep 27 2020
+          </div>
+        </div>
+        <div
+          class="log-list-item-image-container"
+        >
+          <img
+            alt="Dive Thumbnail"
+            aria-label="log list item image"
+            class="log-list-item-image"
+            src="http://res.cloudinary.com/da5khewdo/image/upload/v1601394026/eqig0v1uu2v5rxcsnle9.jpg"
+          />
+        </div>
+      </div>
+      <div
+        class="log-list-item"
+      >
+        <div
+          class="log-list-item-details"
+        >
+          <div
+            class="dive-site"
+          >
+            Cauldron
+          </div>
+          <div
+            class="country-region"
+          >
+            Indonesia - Komodo
+          </div>
+          <div
+            class="date"
+          >
+            Mon Sep 28 2020
+          </div>
+        </div>
+        <div
+          class="log-list-item-image-container"
+        >
+          <img
+            alt="Dive Thumbnail"
+            aria-label="log list item image"
+            class="log-list-item-image"
+            src="http://res.cloudinary.com/da5khewdo/image/upload/v1601394155/jud3djhgbato0jk9qy4j.jpg"
+          />
+        </div>
+      </div>
+      <div
+        class="log-list-item"
+      >
+        <div
+          class="log-list-item-details"
+        >
+          <div
+            class="dive-site"
+          >
+            Cauldron
+          </div>
+          <div
+            class="country-region"
+          >
+            Indonesia - Komodo
+          </div>
+          <div
+            class="date"
+          >
+            Fri Sep 25 2020
+          </div>
+        </div>
+        <div
+          class="log-list-item-image-container"
+        >
+          <img
+            alt="Dive Thumbnail"
+            aria-label="log list item image"
+            class="log-list-item-image"
+            src="http://res.cloudinary.com/da5khewdo/image/upload/v1601394333/c2jvikle33qfzwymyrd5.jpg"
+          />
+        </div>
+      </div>
+      <div
+        class="log-list-item"
+      >
+        <div
+          class="log-list-item-details"
+        >
+          <div
+            class="dive-site"
+          >
+            Cauldron
+          </div>
+          <div
+            class="country-region"
+          >
+            Indonesia - Komodo
+          </div>
+          <div
+            class="date"
+          >
+            Thu Sep 10 2020
+          </div>
+        </div>
+        <div
+          class="log-list-item-image-container"
+        >
+          <img
+            alt="Dive Thumbnail"
+            aria-label="log list item image"
+            class="log-list-item-image"
+            src="http://res.cloudinary.com/da5khewdo/image/upload/v1601405770/aijqkfujo1mi9blimszh.jpg"
+          />
+        </div>
+      </div>
+      <div
+        class="log-list-item"
+      >
+        <div
+          class="log-list-item-details"
+        >
+          <div
+            class="dive-site"
+          >
+            Cauldron
+          </div>
+          <div
+            class="country-region"
+          >
+            Indonesia - Komodo
+          </div>
+          <div
+            class="date"
+          >
+            Wed Sep 16 2020
+          </div>
+        </div>
+        <div
+          class="log-list-item-image-container"
+        >
+          <img
+            alt="Dive Thumbnail"
+            aria-label="log list item image"
+            class="log-list-item-image"
+            src="http://res.cloudinary.com/da5khewdo/image/upload/v1601405903/apwgivkwu5c1c159kdkc.jpg"
+          />
+        </div>
+      </div>
+      <div
+        class="log-list-item"
+      >
+        <div
+          class="log-list-item-details"
+        >
+          <div
+            class="dive-site"
+          >
+            Cauldron
+          </div>
+          <div
+            class="country-region"
+          >
+            Indonesia - Komodo
+          </div>
+          <div
+            class="date"
+          >
+            Sat Sep 19 2020
+          </div>
+        </div>
+        <div
+          class="log-list-item-image-container"
+        >
+          <img
+            alt="Dive Thumbnail"
+            aria-label="log list item image"
+            class="log-list-item-image"
+            src="http://res.cloudinary.com/da5khewdo/image/upload/v1601411835/rzp1t2g5cv7admbtvfge.jpg"
+          />
+        </div>
+      </div>
+      <div
+        class="log-list-item"
+      >
+        <div
+          class="log-list-item-details"
+        >
+          <div
+            class="dive-site"
+          >
+            Cauldron
+          </div>
+          <div
+            class="country-region"
+          >
+            Indonesia - Komodo
+          </div>
+          <div
+            class="date"
+          >
+            Mon Sep 21 2020
+          </div>
+        </div>
+        <div
+          class="log-list-item-image-container"
+        >
+          <img
+            alt="Dive Thumbnail"
+            aria-label="log list item image"
+            class="log-list-item-image"
+            src="http://res.cloudinary.com/da5khewdo/image/upload/v1601412610/qipqyfnyfn7pjyc9kbpx.jpg"
+          />
+        </div>
+      </div>
+      <div
+        class="log-list-item"
+      >
+        <div
+          class="log-list-item-details"
+        >
+          <div
+            class="dive-site"
+          >
+            Cauldron
+          </div>
+          <div
+            class="country-region"
+          >
+            Indonesia - Komodo
+          </div>
+          <div
+            class="date"
+          >
+            Wed Sep 30 2020
+          </div>
+        </div>
+        <div
+          class="log-list-item-image-container"
+        >
+          <img
+            alt="Dive Thumbnail"
+            aria-label="log list item image"
+            class="log-list-item-image"
+            src="http://res.cloudinary.com/da5khewdo/image/upload/v1601413954/uwgxukhkdeng84l4rtng.jpg"
+          />
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
