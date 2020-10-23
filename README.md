@@ -6,7 +6,7 @@
 </p>
 <br>
 
-DEEPSEE is an app designed to help scuba divers make informed decisions about their next dives and aims to replace the conventional divers log book. It aims to acheive this by providing a database of user submitted images with metadata of dives they have recently logged all packaged in a sleek and functional UI.
+DEEPSEE is an app designed to help scuba divers make informed decisions about their next dives and aims to replace the conventional divers log book. It aims to acheive this by providing a database of user submitted images & metadata of dives that have been recently logged all packaged in a sleek and functional UI.
 
 ## Table of Contents
 
@@ -50,8 +50,13 @@ These instruction will help you setup a local development instance of the app.
 
 ## Tech Stack
 
+### Front End
+
 - [React](https://reactjs.org/)
 - [MapboxGL](https://docs.mapbox.com/mapbox-gl-js/api/)
+
+### Back End
+
 - [Express](https://expressjs.com/)
 - [Mongoose](https://mongoosejs.com/)
 - [Cloudinary](https://www.npmjs.com/package/cloudinary)
