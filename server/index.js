@@ -9,7 +9,7 @@ const app = express();
 
 const router = require("./routes");
 
-const PORT = 3001;
+const PORT = 3000;
 
 app.use(cors());
 
