@@ -12,7 +12,7 @@ function LogInPage() {
     <div className="landing-page">
       <div className="logo">
         <div>DEEPSEE</div>
-        <img src="DEEPSEE_logo.png" />
+        <img src="DEEPSEE_logo.png" alt="logo" />
       </div>
       <h1>Log In</h1>
       <form className="form-item" onSubmit={goToLogBook}>

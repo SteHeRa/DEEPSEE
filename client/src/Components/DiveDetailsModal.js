@@ -38,6 +38,7 @@ function DiveDetailsModal(props) {
               className="photo-component-image"
               src={props.dive.photos}
               onClick={() => openImage(props.dive.photos)}
+              alt={"dive site"}
             />
           </div>
         </div>

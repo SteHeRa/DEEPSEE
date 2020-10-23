@@ -10,7 +10,7 @@ function PhotoPreviewComponent({ photo }) {
       aria-label="photo preview image"
       className="photo-component-image"
       src={photo.URL}
-      alt="Image from dive site"
+      alt="dive site"
       onClick={() => openImage(photo.URL)}
     />
   );

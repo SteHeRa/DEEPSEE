@@ -8,7 +8,7 @@ function DiveSiteModal({ closeModal, diveSite }) {
 
   useEffect(() => {
     makePhotoList(diveSite);
-  }, []);
+  }, [diveSite]);
 
   function makePhotoList(diveSite) {
     ApiClient.getPhotos(diveSite).then((photos) => {

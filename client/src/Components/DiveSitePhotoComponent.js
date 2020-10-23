@@ -10,7 +10,7 @@ function DiveSitePhoto({ photo }) {
       <img
         className="photo-component-image"
         src={photo.URL}
-        alt="Image from dive site"
+        alt="dive site"
         onClick={() => openImage(photo.URL)}
       />
       <div className="photo-data">
