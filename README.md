@@ -55,3 +55,11 @@ These instruction will help you setup a local development instance of the app.
 - [Express](https://expressjs.com/)
 - [Mongoose](https://mongoosejs.com/)
 - [Cloudinary](https://www.npmjs.com/package/cloudinary)
+
+## Author
+
+Stephen Head-Rapson - [Github](https://github.com/SteHeRa) - [LinkedIn](https://www.linkedin.com/in/stephen-head-rapson/)
+
+## License
+
+This project is licensed under the MIT License.
