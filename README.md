@@ -16,6 +16,10 @@ DEEPSEE is an app designed to help scuba divers make informed decisions about th
 
 [Tech Stack](#Tech-Stack)
 
+[Author](#Author)
+
+[License](#License)
+
 ## Screenshots
 
 <br>
